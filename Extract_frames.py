@@ -8,7 +8,7 @@ from keras.utils import np_utils
 #from skimage.transform import resize   # for resizing images
 count = 0
 videoFile = "6.mp4" #add name of video or address
-cap = cv2.VideoCapture(videoFile)   # capturing the video from the given path
+cap = cv2.VideoCapture(videoFile)   # capturing the video from the given pathh
 frameRate = cap.get(5) #frame rate
 x=1
 while(cap.isOpened()):
@@ -21,3 +21,4 @@ while(cap.isOpened()):
         cv2.imwrite(filename, frame)
 cap.release()
 print ("Done!")
+   
