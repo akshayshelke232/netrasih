@@ -17,7 +17,7 @@ z=0
 SET_WIDTH = 1000
 SET_HEIGHT = 1500
 
-# Tkinter gui starts here e
+# Tkinter gui starts here
 #window = tkinter.Tk()
 window.title("Netra")
 cv_img = cv2.cvtColor(cv2.imread("n10.jpg"), cv2.COLOR_BGR2RGB)
