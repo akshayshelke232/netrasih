@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Netra The Watch Dog Player</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="realtime.css">
+</head>
+<body class="bg">
+  <div class="bPlayer">
+    <video class="video" autoplay loop>
+      <source  src="https://www.w3schools.com/html/mov_bbb.mp4">
+    </video>
+    <input type="range" class="progressRng" min="1" max="100" value="0" step="0.1"></input>
+  <span class="current">00:00</span>
+  <span class="duration">01:59</span>
+    <div class="ctrlArea">
+      <button class="playBtn" id="playBtn">▶</button>
+      <button data-skip="-10" class="fastBkrd"><<</button>
+      <button data-skip="20" class="fastFwrd">>></button>
+      <input type="range" class="volume" min="0" max="1" step="0.05" value="1">
+      <input type="range" class="speed" min="0" max="2" step="0.1" value="1">
+      <button class="fullScreen">⛶</button>
+    </div>
+    <div class="container-fluid" style="margin-top: 3%">
+            <div class="row">
+                <div class="col-md-12 reset-height">
+                    <div class="mybutton" id="filechooser" >CHOOSE VIDEO</div>
+                    <input id="file-input" type="file" name="name" style="display: none;" />
+                </div>
+                <div class="col-md-3 offset-md-3 reset-height center-text">
+                        <div class="mybutton" >START DETECTION</div>
+                </div>
+                <div class="col-md-3  reset-height center-text">
+                        <div class="mybutton"  >DOWNLOAD REPORT</div>
+                </div>
+            </div>
+        </div>
+  </div>
+  
+ 
+  
+        <!-- jQuery CDN - Slim version (=without AJAX) -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <!-- Popper.JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    
+  <script src="realtime.js"></script>
+</body>
+</html>
