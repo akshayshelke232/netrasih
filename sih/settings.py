@@ -35,7 +35,11 @@ if DEBUG:
 # Application definition
 
 INSTALLED_APPS = [
+<<<<<<< HEAD
     'student.apps.StudentConfig',
+=======
+    
+>>>>>>> da3139b9459ce5906864cb874bb6080ff52e1371
     'userinter.apps.UserinterConfig',
     'django.contrib.admin',
     'django.contrib.auth',

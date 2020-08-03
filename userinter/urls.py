@@ -9,7 +9,11 @@ urlpatterns=[
     path('dashh/',views.realtime,name='realtime'),
     path('',views.login,name='login'),
     #path('login',views.login,name='login'),
+<<<<<<< HEAD
     path('upload',include('student.urls')),
+=======
+   
+>>>>>>> da3139b9459ce5906864cb874bb6080ff52e1371
     
     path('createuser/',views.createuser,name='createuser'),
     path('createuser',views.createuser,name='createuser'),
