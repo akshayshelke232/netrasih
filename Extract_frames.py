@@ -9,7 +9,7 @@ from keras.utils import np_utils
 count = 0
 videoFile = "6.mp4" #add name of video or address
 cap = cv2.VideoCapture(videoFile)   # capturing the video from the given pathh
-frameRate = cap.get(5) #frame rate
+frameRate = cap.get(5) #frame rateeeee
 x=1
 while(cap.isOpened()):
     frameId = cap.get(1) #current frame number

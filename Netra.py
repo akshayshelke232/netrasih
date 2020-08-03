@@ -8,7 +8,7 @@ import cv2
 import PIL
 
 
-# Tkinter gui starts here
+# Tkinter gui starts hereee
 window = Tk()
 window.title("netra")
 window.geometry('2000x2000')
