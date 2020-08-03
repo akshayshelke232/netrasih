@@ -1,0 +1,115 @@
+{%load static%}
+{% block content %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<title>student Registration</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="{%static 'images/icons/favicon.ico'%}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{%static 'vendor/bootstrap/css/bootstrap.min.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{%static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{%static 'vendor/animate/animate.css'%}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{%static 'vendor/css-hamburgers/hamburgers.min.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{%static 'vendor/select2/select2.min.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{%static 'css/util.css'%}">
+	<link rel="stylesheet" type="text/css" href="{%static 'css/main.css'%}">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+            <div class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<img src="{%static 'images/img2.jpeg'%}" alt="IMG">
+				</div>
+                <div class="col-md-6 offset-md-3 mt-5">
+                    <span class="login100-form-title">
+						Student Registration
+					</span>
+		
+					
+        <form class="login100-form validate-form" action="update/{{datas.id}}" method="post" >
+          {% csrf_token %}
+          <div class="wrap-input100 validate-input" data-validate = "Name is Required">
+			   <input  type="hidden" name="id" value="{{datas.id}}">
+			   
+		   </div>
+          <div class="wrap-input100 validate-input" data-validate = "Name is Required">
+			        <label class="col-form-label" style="text-underline-position: below;"> Name:</label>
+						<input  type="text" name="name" value="{{datas.name}}">
+						
+					</div>
+          <div class="wrap-input100 validate-input" data-validate = "Name is Required">
+			<label class="col-form-label" style="text-underline-position: below;"> Class:</label>
+						<input type="text" name="class" value="{{datas.std}}">
+					
+						
+					</div>
+          <div class="wrap-input100 validate-input" data-validate = "Name is Required">
+			<label class="col-form-label" style="text-decoration-color: black;"> Roll NO:</label>
+						<input type="text" name="rollno" value="{{datas.rollno}}">
+						
+					</div>
+          <hr>
+          <div class="form-group mt-3">
+            <label class="mr-2">Upload your Image:</label>
+            <input type="file" name="files" value="{{datas.files}}">
+          </div>
+          <hr>
+         
+          <input  type="submit" value='update'class="btn btn-primary">
+		  <div class="text-center p-t-12">
+						<a class="txt2" >
+                            <a href="{% url 'uploadata' %}"> <b>Update Completed?</b></a>
+						
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+						</a>
+					</div>
+        </form>
+		{% if messages %}
+					{% for message in messages %}
+					  <h3 style="color: green;">{{ message }} </h3>
+			
+					{% endfor %}
+					
+			
+				{% endif %}
+    </div> 
+
+			</div>
+		</div>
+    </div>
+	
+	
+
+	
+<!--===============================================================================================-->	
+	<script src="{%static 'vendor/jquery/jquery-3.2.1.min.js'%}"></script>
+<!--===============================================================================================-->
+	<script src="{%static 'vendor/bootstrap/js/popper.js '%}"></script>
+	<script src="{%static 'vendor/bootstrap/js/bootstrap.min.js'%}"></script>
+<!--===============================================================================================-->
+	<script src="{%static 'vendor/select2/select2.min.js'%}"></script>
+<!--===============================================================================================-->
+	<script src="{%static 'vendor/tilt/tilt.jquery.min.js'%}"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="{%static 'js/main.js'%}"></script>
+
+</body>
+</html>
+{% endblock%}
