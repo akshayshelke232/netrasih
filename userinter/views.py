@@ -59,10 +59,22 @@ def index(request):
     return render(request,'index.html')
 def realtime(request):
     return render(request,'realtime.html')
+<<<<<<< HEAD
+def uploadata(request):
+    return render(request,'student_table.html',)
+
+
+def upload(request):
+    return render(request,'upload.html')
+
+def delete(request,id):
+    return render(request, 'students_table.html')
+=======
 
 
 
 
+>>>>>>> da3139b9459ce5906864cb874bb6080ff52e1371
 
 def logout(request):
     auth.logout(request)

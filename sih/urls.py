@@ -23,6 +23,13 @@ urlpatterns = [
     path('',include('userinter.urls')),
     path('index',include('userinter.urls')),
     path('login',include('userinter.urls')),
+<<<<<<< HEAD
+    path('upload',include('student.urls')),
+    path('students_table',include('student.urls')),
+    path('uploadata',include('student.urls')),
+    path('update',include('student.urls')),
+=======
+>>>>>>> da3139b9459ce5906864cb874bb6080ff52e1371
     path('admin/', admin.site.urls),
    
     
